@@ -520,3 +520,16 @@ AVATTO_3_GANG_TOUCH:
   info: Indicator LEDs are hard wired to buttons, but they can be forced on with C4 ?
   github_issue: https://github.com/romasku/tuya-zigbee-switch/issues/41
   store: https://www.aliexpress.com/item/1005007097427150.html
+TS0012_EKF:
+  config_str: num4zd6s;TS0012-EKF;BA0u;LD7;SC2u;SC3u;RC0;RB4;
+  device_type: end_device
+  tuya_manufacturer_id: 4417
+  tuya_image_type: 54179
+  firmware_image_type: 43550
+  stock_converter_model: TS0012
+  tuya_manufacturer_name: _TZ3000_num4zd6s
+  zb_module: ZT3L
+  human_name: EKF 2-gang switch
+  status: Supported
+  github_issue: null
+  store: https://ekfgroup.com/ru/catalog/products/umnoe-rele-v-podrozetnik-2-kanalnoe-bez-nejtrali-zigbee-ekf-connect-select
