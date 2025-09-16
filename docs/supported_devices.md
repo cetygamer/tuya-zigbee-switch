@@ -43,4 +43,5 @@ Also read:
 | [TS0004_switch_module](https://www.zigbee2mqtt.io/devices/TS0004_switch_module.html) | Avatto 4 gang switch module with N  | _TZ3000_ltt60asa | router | In progress |   [link](https://github.com/romasku/tuya-zigbee-switch/issues/42)  | 
 | [TS0004_switch_module](https://www.zigbee2mqtt.io/devices/TS0004_switch_module.html) | No-name 4 gang switch module with N  | _TZ3000_mmkbptmx | router | Supported |   [link](https://github.com/romasku/tuya-zigbee-switch/issues/66)  | 
 | [TS0003_switch_3_gang](https://www.zigbee2mqtt.io/devices/TS0003_switch_3_gang.html) | Avatto Zigbee 3 Gang (ZTS02RD-US-W3)  | _TZ3000_avky2mvc | router | In progress |   [link](https://github.com/romasku/tuya-zigbee-switch/issues/41)  | 
+| [TS0011](https://www.zigbee2mqtt.io/devices/TS0011.html) | HOMMYN 1-gang switch  | _TZ3000_tw4ztbp4 | router / end_device | Supported |    -  | 
 
