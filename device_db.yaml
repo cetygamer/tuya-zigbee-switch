@@ -520,3 +520,16 @@ AVATTO_3_GANG_TOUCH:
   info: Indicator LEDs are hard wired to buttons, but they can be forced on with C4 ?
   github_issue: https://github.com/romasku/tuya-zigbee-switch/issues/41
   store: https://www.aliexpress.com/item/1005007097427150.html
+TS0011_HOMMYN:
+  config_str: tw4ztbp4;TS0011-HOMMYN;BA0u;LD7;SC2u;RB5;
+  device_type: end_device
+  tuya_manufacturer_id: 4417
+  tuya_image_type: 54179
+  firmware_image_type: 43551
+  stock_converter_model: TS0011
+  tuya_manufacturer_name: _TZ3000_tw4ztbp4
+  zb_module: ZT3L
+  human_name: HOMMYN 1-gang switch
+  status: Supported
+  github_issue: null
+  store: https://www.rusklimat.ru/product/modul-rele-hommyn-zigbee-1-kanal-bez-neytrali-rlzbnn01
