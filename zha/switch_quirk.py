@@ -134,6 +134,7 @@ CONFIGS = [
     "ltt60asa;TS0004-Avv;BB5u;LC1;SB4u;RC0;SD2u;RC4;SC3u;RD4;SC2u;RD7;",
     "mmkbptmx;TS0004-custom;BB6u;LB1;SC1u;RB7;SC2u;RB5;SC3u;RB4;SD2u;RC4;",
     "avky2mvc;Avatto-3-touch;LB5;SD3u;RC2;SD7u;RC3;SD4u;RD2;M;",
+    "num4zd6s;TS0012-EKF;BA0u;LD7;SC2u;SC3u;RC0;RB4;",
 ]
 
 for config in CONFIGS:
