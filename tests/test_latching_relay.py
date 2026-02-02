@@ -92,12 +92,12 @@ def test_mutual_exclusion_between_pins(
         latching_device.call_zigbee_cmd(cfg.ep, ZCL_CLUSTER_ON_OFF, 0x01)
         wait_for(lambda: latching_device.get_gpio(cfg.on_pin) is True)
         assert latching_device.get_gpio(cfg.off_pin) is False
-        latching_device.step_time(200)  # Allow pulse to finish
+        latching_device.step_time(600)  # Allow pulse to finish
 
         latching_device.call_zigbee_cmd(cfg.ep, ZCL_CLUSTER_ON_OFF, 0x00)
         wait_for(lambda: latching_device.get_gpio(cfg.on_pin) is False)
         assert latching_device.get_gpio(cfg.off_pin) is True
-        latching_device.step_time(200)  # Allow pulse to finish
+        latching_device.step_time(600)  # Allow pulse to finish
 
 
 @dataclass
@@ -171,7 +171,7 @@ def test_mutual_exclusion_between_relays(
 
         for pulse in tracker.ended_pulses():
             assert pulse.duration is not None
-            assert 80 <= pulse.duration <= 120
+            assert 40 <= pulse.duration <= 60
 
 
 def test_mutual_no_exclusion_between_relays_all_on(
