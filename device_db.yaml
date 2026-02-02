@@ -2066,7 +2066,7 @@ MODULE_TUYA_NOVATO_TS0012:
   human_name: Tuya QS-Zigbee-S04-2C-ML-C
   category: module
   power: mains
-  neutral: optional
+  neutral: without
   device_type: end_device
   stock_model_name: TS0012
   stock_manufacturer_name: _TZ3000_c4muk4ys
@@ -2076,8 +2076,8 @@ MODULE_TUYA_NOVATO_TS0012:
   tuya_module: ZTU
   mcu_family: Telink
   mcu: TLSR8258
-  config_str: c4muk4ys;TS0012-QS;BB4u;LC2;SD2u;RA0B6;SC3u;RC0D7;SLP;      # S1 com com S2
-  alt_config_str: c4muk4ys;TS0012-QS;BB4u;LC2;SC3u;RA0B6;SD2u;RC0D7;SLP;  # S2 com com S1
+  config_str: c4muk4ys;TS0012-QS;BB4u;LC2;SD2u;RA0B6;SC3u;RC0D7;      # S1 com com S2
+  alt_config_str: c4muk4ys;TS0012-QS;BB4u;LC2;SC3u;RA0B6;SD2u;RC0D7;  # S2 com com S1
   old_manufacturer_names: null
   old_zb_models: null
   stock_manufacturer_id: 4417
