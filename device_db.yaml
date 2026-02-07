@@ -810,24 +810,24 @@ MODULE_GIRIER_A_TS0001:
   neutral: required
   device_type: router
   stock_model_name: TS0001
-  stock_manufacturer_name: null
-  stock_converter_manufacturer: null
-  stock_converter_model: null
+  stock_manufacturer_name: _TZ3210_9hbau615
+  stock_converter_manufacturer: Tuya
+  stock_converter_model: TS0001
   override_z2m_device: null
   tuya_module: ZT3L
   mcu_family: Telink
   mcu: TLSR8258
-  config_str: null____;TS0001-GRA;BB1u;LD7;SC2u;RC0;
+  config_str: 9hbau615;TS0001-GRA;BD2u;LC0;SB4u;RC2;
   alt_config_str: null
   old_manufacturer_names: null
   old_zb_models: null
   stock_manufacturer_id: 4417
-  stock_image_type: 54179
+  stock_image_type: 2050
   firmware_image_type: 43595
-  build: no
-  status: in_progress
-  info: Needs ID and pinout confirmation
-  threads: https://github.com/romasku/tuya-zigbee-switch/issues/183
+  build: yes
+  status: fully_supported
+  info: Supported
+  threads: https://github.com/romasku/tuya-zigbee-switch/issues/327
   store: https://www.aliexpress.com/item/1005006084705740.html
 MODULE_GIRIER_A_TS0002:
   human_name: Girier 🅰 2-gang
