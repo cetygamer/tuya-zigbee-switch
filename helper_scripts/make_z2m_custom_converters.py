@@ -46,7 +46,11 @@ if __name__ == "__main__":
         has_dedicated_net_led = False
         has_battery_cluster = False
         for peripheral in peripherals:
-            if peripheral == "SLP" or peripheral == "M":
+            if peripheral == "M":
+                continue
+            if peripheral[:2] == "LP":
+                continue
+            if peripheral[:2] == "PD":
                 continue
             if peripheral[0] == "R":
                 relay_cnt += 1
