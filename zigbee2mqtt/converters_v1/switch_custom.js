@@ -210,8 +210,10 @@ const romasku = {
                 const parts = value.slice(0, -1).split(';');  // Drop last ;
                 if (parts.length < 2) throw new Error("Model and/or manufacturer missing");
                 for (const part of parts.slice(2)) {
-                    if (part == 'SLP') {
-                        continue;   
+                    if (part.startsWith('LP')) {
+                        continue;
+                    } else if (part.startsWith('PD')) {
+                        continue;
                     } else if (part[0] == 'D') {
                         if (!/^D\d+$/.test(part)) {
                             throw new Error(`Debounce option ${part} is invalid. Use D<N>, e.g. D100 or D0`);
@@ -239,7 +241,7 @@ const romasku = {
                     } else if(part[0] == 'i') {
                         ; // TODO: write validation
                     } else {
-                        throw new Error(`Invalid entry ${part}. Should start with one of B, BT, C, D, I, L, M, R, S, SLP, X, i`);
+                        throw new Error(`Invalid entry ${part}. Should start with one of B, BT, C, D, I, L, LP, M, PD, R, S, X, i`);
                     }
                 }
             },
@@ -16796,7 +16798,6 @@ const definitions = [
             deviceEndpoints({ endpoints: {"switch_left": 1, "switch_right": 2, "relay_left": 3, "relay_right": 4, } }),
             romasku.deviceConfig("device_config", "switch_left"),
             romasku.multiPressResetCount("multi_press_reset_count", "switch_left"),
-            romasku.networkIndicator("network_led", "switch_left"),
             onOff({ endpointNames: ["relay_left", "relay_right"] }),
             romasku.pressAction("switch_left_press_action", "switch_left"),
             romasku.switchMode("switch_left_mode", "switch_left"),

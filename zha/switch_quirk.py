@@ -401,7 +401,7 @@ CONFIGS = [
     "hdc8bbha;NovatoZRM01;BB4u;LC2;SC4f;RD2;",
     "m8f3z8ju;NovatoZRM02;BC3u;LC4;SC2f;RB5;SB4f;RD2;",
     "30jqysvd;NovatoZNR01;BB7u;LB1;SC2u;RB5;",
-    "c4muk4ys;TS0012-QS;BB4u;LC2;SD2u;RA0B6;SC3u;RC0D7;SLP;",
+    "c4muk4ys;TS0012-QS;BB4u;LC2;SD2u;RA0B6;SC3u;RC0D7;LP20;PD0;",
     "ol1uhvza;TS130F-NOV;BC3u;LC4;XC2B4f;CB5D2;",
     "aksyshpw;TS0003-C;BB1u;LD7;SC2u;RC0;SC3u;RB4;SD2u;RB5;",
     "tqlv4ug4;TS0001-custom;BD2u;LC0;SB4u;RC2;",
@@ -464,15 +464,15 @@ CONFIGS = [
     "l9brjwau;TS0002-BS-1;LD4i;SB5u;RC3;IC1;SD3u;RC2;ID7;M;",
     "qkixdnon;TS0003-BSDB;LC4i;SB5u;RC3;SC1u;RC2;SD3u;RD7;M;",
     "qkixdnon;TS0003-BSEED;LC4i;SB5u;RC3;SC1u;RC2;SD3u;RD7;M;",
-    "aetquff4;BSLR1;LC3;SB4u;RC0B6;IC2;M;SLP;",
-    "xk5udnd6;BSLR2;LC3;SB5u;RC0B6;ID2;SD4u;RA1D7;ID3;M;SLP;",
-    "xk5udnd6;Bseed-2-gang-2;LC3;SB5u;RC0B6;ID2;SD4u;RA1D7;ID3;M;SLP;",
-    "xk5udnd6;Bseed-2-gang-2-ED;LC3;SB5u;RC0B6;ID2;SD4u;RA1D7;ID3;M;SLP;",
-    "Bseed-2-gang-2;BSLR2;LC3;SB5u;RC0B6;ID2;SD4u;RA1D7;ID3;M;SLP;",
-    "Bseed-2-gang-2;Bseed-2-gang-2;LC3;SB5u;RC0B6;ID2;SD4u;RA1D7;ID3;M;SLP;",
-    "Bseed-2-gang-2;Bseed-2-gang-2-ED;LC3;SB5u;RC0B6;ID2;SD4u;RA1D7;ID3;M;SLP;",
-    "kfwhmnvc;BSLR3;LC3;SB5u;RC0B6;ID2;SB4u;RA1D7;IC2;SD4u;RA0C1;ID3;M;SLP;",
-    "kfwhmnvc;TS0013-2-BS;LC3;SB5u;RC0B6;ID2;SB4u;RA1D7;IC2;SD4u;RA0C1;ID3;M;SLP;",
+    "aetquff4;BSLR1;LC3;SB4u;RC0B6;IC2;M;PD0;",
+    "xk5udnd6;BSLR2;LC3;SB5u;RC0B6;ID2;SD4u;RA1D7;ID3;M;PD0;",
+    "xk5udnd6;Bseed-2-gang-2;LC3;SB5u;RC0B6;ID2;SD4u;RA1D7;ID3;M;PD0;",
+    "xk5udnd6;Bseed-2-gang-2-ED;LC3;SB5u;RC0B6;ID2;SD4u;RA1D7;ID3;M;PD0;",
+    "Bseed-2-gang-2;BSLR2;LC3;SB5u;RC0B6;ID2;SD4u;RA1D7;ID3;M;PD0;",
+    "Bseed-2-gang-2;Bseed-2-gang-2;LC3;SB5u;RC0B6;ID2;SD4u;RA1D7;ID3;M;PD0;",
+    "Bseed-2-gang-2;Bseed-2-gang-2-ED;LC3;SB5u;RC0B6;ID2;SD4u;RA1D7;ID3;M;PD0;",
+    "kfwhmnvc;BSLR3;LC3;SB5u;RC0B6;ID2;SB4u;RA1D7;IC2;SD4u;RA0C1;ID3;M;PD0;",
+    "kfwhmnvc;TS0013-2-BS;LC3;SB5u;RC0B6;ID2;SB4u;RA1D7;IC2;SD4u;RA0C1;ID3;M;PD0;",
     "ysdv91bk;TS0001-BSMN;LA0i;SC3u;RC2;M;",
     "mklgayek;TS0002-BSMN;LA0i;SC3u;RC2;SB7u;RB4;M;",
     "7aqaupa9;TS0003-BSMN;LA0i;SC3u;RC2;SB7u;RB4;SB5u;RC0;M;",
@@ -556,10 +556,10 @@ CONFIGS = [
     "u6ocpapf;TS0001-CUS;LB1;SC3u;RD2;M;",
     "gbdxbmwz;TS0004-CUS;LB1;SC3u;RD2;SD7u;RB5;SC2u;RB4;SB7u;RC0;M;",
     "nrdwow8a;TS0003-TB;LC4i;SD3u;RC2;SD7u;RC3;SD4u;RD2;M;",
-    "zmlunnhy;Zemi-2-gang;SC3u;RC2D4;IB7;SD2u;RB5C4;ID7;LP50;M;",
-    "zmlunnhy;Zemi-2-gang-ED;SC3u;RC2D4;IB7;SD2u;RB5C4;ID7;LP50;M;",
-    "Zemi-2-gang;Zemi-2-gang;SC3u;RC2D4;IB7;SD2u;RB5C4;ID7;LP50;M;",
-    "Zemi-2-gang;Zemi-2-gang-ED;SC3u;RC2D4;IB7;SD2u;RB5C4;ID7;LP50;M;",
+    "zmlunnhy;Zemi-2-gang;SC3u;RC2D4;IB7;SD2u;RB5C4;ID7;LP10;M;",
+    "zmlunnhy;Zemi-2-gang-ED;SC3u;RC2D4;IB7;SD2u;RB5C4;ID7;LP10;M;",
+    "Zemi-2-gang;Zemi-2-gang;SC3u;RC2D4;IB7;SD2u;RB5C4;ID7;LP10;M;",
+    "Zemi-2-gang;Zemi-2-gang-ED;SC3u;RC2D4;IB7;SD2u;RB5C4;ID7;LP10;M;",
     "ilauzyjm;TS0011-ZS;SB0u;RD1A4;IA6;M;",
     "rbl8c85w;TS0012-ZS;SA0u;RD1A4;IC1;SB1u;RC0C2;IA5;M;",
 ]
@@ -574,7 +574,11 @@ for config in CONFIGS:
     cover_cnt = 0
     has_dedicated_net_led = False
     for peripheral in peripherals:
-        if peripheral == "SLP":
+        if peripheral == "M":
+            continue
+        if peripheral[:2] == "LP":
+            continue
+        if peripheral[:2] == "PD":
             continue
         if peripheral[0] == "R":
             relay_cnt += 1
@@ -588,6 +592,8 @@ for config in CONFIGS:
             indicators_cnt += 1
         if peripheral[0] == 'L':
             has_dedicated_net_led = True
+        if peripheral[:2] == "BT":
+            continue
 
     builder =  QuirkBuilder(zb_manufacturer, zb_model)
 
