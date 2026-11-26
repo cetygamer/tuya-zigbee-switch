@@ -110,8 +110,8 @@ Additional options:
 | **`i00000`** | Image type                   | • Change OTA image_type (migrate to another build)                                |
 | **`M`**      | Momentary                    | • Defaults buttons to momentary mode (for devices with built-in switches)         |
 | **`BT<pin>`** | Battery mode                | • Enables battery-powered behavior <br> • Adds battery measurement/reporting using the selected ADC pin |
-| **`SLP`**    | Simultaneous Latching Pulses |  • Enable simultaneous pulses for latching relays (they are disallowed by default)|
 | **`LP<N>`**   | Latching pulses duration    | • Set Latching pulse duration in ms for latching relays <br> • Example: `LP50` reduces latching pulse duration to 50ms (default 100ms) |
+| **`PD<N>`**  | Pulse delay                  | • Set delay between latching pulses. <br> • Example: `PD500` increases delay between pulses to 500ms (by default equals to pulse duration) |
 
 ## Build and install
 

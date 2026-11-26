@@ -40,10 +40,31 @@ def latching_simultenious_device(
     pins_config: list[LatchingRelayTestConfig],
 ) -> Iterator[Device]:
     cfg = (
-        "X;Y;SLP;"
+        "X;Y;PD0;"
         + ";".join(f"R{cfg.on_pin}{cfg.off_pin}" for cfg in pins_config)
         + ";"
     )
+    p = StubProc(device_config=cfg).start()
+    try:
+        yield Device(p)
+    finally:
+        p.stop()
+
+
+LATCHING_DELAY_DEVICE_RELAY_PULSE = 20
+LATCHING_DELAY_DEVICE_PULSE_DELAY = 500
+
+
+@pytest.fixture()
+def latching_delay_device(
+    pins_config: list[LatchingRelayTestConfig],
+) -> Iterator[Device]:
+    cfg = (
+        f"X;Y;LP{LATCHING_DELAY_DEVICE_RELAY_PULSE};PD{LATCHING_DELAY_DEVICE_PULSE_DELAY};"
+        + ";".join(f"R{cfg.on_pin}{cfg.off_pin}" for cfg in pins_config)
+        + ";"
+    )
+    print(cfg)
     p = StubProc(device_config=cfg).start()
     try:
         yield Device(p)
@@ -218,3 +239,34 @@ def test_off_pin_is_a0() -> None:
 
     finally:
         p.stop()
+
+
+def test_latch_pulse_and_pulse_delay(
+    latching_delay_device: Device, pins_config: list[LatchingRelayTestConfig]
+) -> None:
+    def toggle_all_relays(cmd: int) -> None:
+        for cfg in pins_config:
+            latching_delay_device.call_zigbee_cmd(cfg.ep, ZCL_CLUSTER_ON_OFF, cmd)
+
+    tracker = PulseTracker(
+        gpios=[cfg.on_pin for cfg in pins_config] + [cfg.off_pin for cfg in pins_config]
+    )
+
+    for iteration in range(10):
+        tracker.reset()
+        toggle_all_relays(0x01 if iteration % 2 == 0 else 0x00)
+        tracker.refresh(0, latching_delay_device)
+
+        while len(tracker.ended_pulses()) < len(pins_config):
+            latching_delay_device.step_time(10)
+            tracker.refresh(10, latching_delay_device)
+            assert len(tracker.active_pulses()) <= 1
+
+        for i, pulse in enumerate(tracker.ended_pulses()):
+            assert pulse.duration is not None
+            assert LATCHING_DELAY_DEVICE_RELAY_PULSE - 20 <= pulse.duration <= LATCHING_DELAY_DEVICE_RELAY_PULSE + 20
+            if i == 0:
+                ended_pulses_0_start_time = pulse.pulse_start_time
+            else:
+                exp_time = ended_pulses_0_start_time + i * LATCHING_DELAY_DEVICE_PULSE_DELAY
+                assert exp_time - 20 <= pulse.pulse_start_time <= exp_time + 20

@@ -65,8 +65,8 @@ uint8_t cover_clusters_cnt = 0;
 hal_zigbee_cluster  clusters[32];
 hal_zigbee_endpoint endpoints[10];
 
-uint8_t allow_simultaneous_latching_pulses = 0;
-uint8_t relay_pulse_ms = 100;
+uint16_t relay_pulse_ms = 100;
+uint16_t pulse_delay_ms = (uint16_t)-1;
 
 battery_t battery = {
     .pin         = HAL_INVALID_PIN,
@@ -116,13 +116,13 @@ void parse_config() {
     char *   entry;
     for (entry = extract_next_entry(&cursor); *entry != '\0';
          entry = extract_next_entry(&cursor)) {
-        if (entry[0] == 'S' && entry[1] == 'L' && entry[2] == 'P') {
-            // Simultaneous Latching Pulses == SLP
-            allow_simultaneous_latching_pulses = 1;
-        } else if (entry[0] == 'L' && entry[1] == 'P' && entry[2] >= '0' && entry[2] <= '9') {
+        if (entry[0] == 'P' && entry[1] == 'D') {
+            // PD<N> sets the relays pulse delay in milliseconds.
+            pulse_delay_ms = (uint16_t)parse_int(entry + 2);
+        } else if (entry[0] == 'L' && entry[1] == 'P') {
             // LP<N> sets the relays latching pulse duration in milliseconds.
             relay_pulse_ms = (uint16_t)parse_int(entry + 2);
-        } else if (entry[0] == 'D' && entry[1] >= '0' && entry[1] <= '9') {
+        } else if (entry[0] == 'D' && entry[1]) {
             // D<N> sets the global debounce duration in milliseconds.
             debounce_ms = (uint16_t)parse_int(entry + 1);
             for (int i = 0; i < buttons_cnt; i++) {

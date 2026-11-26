@@ -21,7 +21,7 @@ if __name__ == "__main__":
     if start_pos == -1 or end_pos == -1:
         print("No config found")
         exit(1)
-    
+
     config = approx_config_part[start_pos + 1:end_pos]
 
     entries = [
@@ -88,6 +88,10 @@ if __name__ == "__main__":
         if led_key in config_dict:
             pin = pin_map[config_dict[led_key]]
             custom_config += f"I{pin};"
-    
+
+    if "rl_drvtime" in config_dict:
+        relay_pulse = config_dict["rl_drvtime"]
+        custom_config += f"LP{relay_pulse};"
+
     print(config_dict)
     print(custom_config)
